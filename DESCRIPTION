@@ -1,0 +1,34 @@
+Package: odmgm
+Title: Research Compendium for paper on Outlier Detection using Mixed Graphical Models
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Mads",
+           family = "Lindskou",
+           role = c("aut", "cre"),
+           email = "mads@math.aau.dk")
+Description: Contains functions to generate the plots and statistical output found in the paper
+Depends: R (>= 3.5.0)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+LinkingTo: 
+    Rcpp
+Imports: 
+    Rcpp,
+    Matrix,
+    doParallel,
+    foreach,
+    igraph,
+    ggplot2,
+    ggridges,
+    methods
+Suggests:
+    knitr,
+    rmarkdown,
+    pander,
+    dplyr,
+    testthat,
+    gRapHD	
+VignetteBuilder: knitr
+RoxygenNote: 7.1.0
+SystemRequirements: C++11

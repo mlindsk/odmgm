@@ -1,0 +1,7 @@
+*.o
+*.so
+*.dll
+efs_cpp
+GPATH
+GRTAGS
+GTAGS

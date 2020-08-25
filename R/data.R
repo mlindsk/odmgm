@@ -1,0 +1,31 @@
+#' Cover type data
+#'
+#' This dataset is popular for several reasons. For one, it is contemporary and holds
+#' important information about natural resource planning. Secondly, it demands the usage
+#' of non-trivial models in order to capture the big amount of information. This has
+#' caught the attention of, especially, researchers in the machine learning community in
+#' order to benchmark different classification models. Each sample in the data is taken
+#' from a $30m \times 30m$ patch of forest that are classified as one of seven CTs
+#' represented as integers:
+#' 
+#' \describe{
+#'   \item{\code{1} (Spruce/Fir)}{}
+#'   \item{\code{2} (Lodgepole Pine)}{}
+#'   \item{\code{3} (Ponderosa Pine)}{}
+#'   \item{\code{4} (Cottonwood/Willow)}{}
+#'   \item{\code{5} (Aspen)}{}
+#'   \item{\code{6} (Douglas/Fir)}{}
+#'   \item{\code{7} (Krummholz)}{}
+#' }
+#'
+#' In addition, the CT data contains $53$ explanatory variables of which $44$ are
+#' discrete with two levels. Of these, $40$ describes the presence (or absence) of
+#' a particular soil type and $4$ describes the presence (or absence) of the
+#' wilderness area. The remaining continuous variables includes for example
+#' elevation in meters, slope in degrees, horizontal distance to hydrology
+#' and hillshade at noon.
+#' 
+#' @docType data
+#' 
+#' @references \href{https://archive.ics.uci.edu/ml/datasets/dermatology}{Cover type data}
+"covertype"
