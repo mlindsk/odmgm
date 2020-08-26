@@ -29,30 +29,6 @@ Example of Usage
 
 Once the `odmgm` package is intalled
 
-Cite
-====
-
-If you want to cite the code, please use
-
-``` latex
-@software{mlindsk_2020_3999522,
-  author       = {mlindsk},
-  title        = {mlindsk/odmgm v1.0},
-  month        = aug,
-  year         = 2020,
-  publisher    = {Zenodo},
-  version      = {v1.0},
-  doi          = {10.5281/zenodo.3999522},
-  url          = {https://doi.org/10.5281/zenodo.3999522}
-}
-```
-
-If you want to cite the method, please use
-
-``` latex
-TBA
-```
-
 See also
 ========
 
