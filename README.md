@@ -24,11 +24,6 @@ The Analysis
 
 The code snippets to reproduce the results in the paper is located in the `analysis` folder.
 
-Example of Usage
-================
-
-Once the `odmgm` package is intalled
-
 See also
 ========
 
