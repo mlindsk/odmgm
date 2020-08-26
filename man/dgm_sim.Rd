@@ -16,7 +16,9 @@ dgm_sim(A, adj, nsim = 10000, ncores = 1)
 \item{ncores}{Number of cores to use in parallelization}
 }
 \value{
-This function returns a matrix of dimension \code{nsim x ncol(A)} where each row correspond to a simulated observation from a DGM represented by \code{adj}.
+This function returns a matrix of dimension \code{nsim x ncol(A)}
+where each row correspond to a simulated observation from a DGM represented
+by \code{adj}.
 }
 \description{
 This function simulates observations from a discrete DGM using

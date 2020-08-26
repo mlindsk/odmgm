@@ -25,6 +25,3 @@ that the observed deviance is larger than all values and it would disturb the pl
 
 No extra arguments \code{...} are implement at the moment.
 }
-\examples{
-# TBA
-}

@@ -5,7 +5,7 @@
 #' of non-trivial models in order to capture the big amount of information. This has
 #' caught the attention of, especially, researchers in the machine learning community in
 #' order to benchmark different classification models. Each sample in the data is taken
-#' from a $30m \times 30m$ patch of forest that are classified as one of seven CTs
+#' from a $30m x 30m$ patch of forest that are classified as one of seven CTs
 #' represented as integers:
 #' 
 #' \describe{
@@ -28,4 +28,4 @@
 #' @docType data
 #' 
 #' @references \href{https://archive.ics.uci.edu/ml/datasets/dermatology}{Cover type data}
-"covertype"
+"covtype"

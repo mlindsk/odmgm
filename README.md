@@ -17,7 +17,7 @@ Secondly, the package suggests the `gRapHD` package, all though no longer mainta
 install.packages("gRapHD/gRapHD_0.2.6.tar.gz", repos = NULL, type = "source")
 ```
 
-The `gRapHD` package is needed to fit a mixed interaction graph. Currently, the `R` package ecosystem lacks good maintained algorithms for the purpose of model selection in mixed graphical models.
+The `gRapHD` package is needed to fit a mixed interaction graph. Currently, the `R` package ecosystem lacks good maintained algorithms for the purpose of model selection in mixed graphical models. We provide the wrapper function `odmgm:::fit_mixed_graph`.
 
 The Analysis
 ============

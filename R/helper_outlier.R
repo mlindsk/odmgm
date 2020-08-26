@@ -107,8 +107,6 @@ print.outlier <- function(x, ...) {
 #' that the observed deviance is larger than all values and it would disturb the plot if included.
 #'
 #' No extra arguments \code{...} are implement at the moment.
-#' @examples
-#' # TBA
 #' @export
 plot.outlier <- function(x, sig_col = "#FF0000A0", ...) {
   # args <- list(...)
@@ -152,8 +150,6 @@ plot.outlier <- function(x, sig_col = "#FF0000A0", ...) {
 #' that the observed deviance is larger than all values and it would disturb the plot if included.
 #'
 #' No extra arguments \code{...} are implement at the moment.
-#' @examples
-#' # TBA
 #' @export
 plot.multiple_models <- function(x, sig_col = "#FF0000A0", ...) {
   z_dev_pval <- make_observation_info(x)

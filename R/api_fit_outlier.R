@@ -20,7 +20,6 @@
 #' The parameter \code{approx} is used to output the correct type of discrete simulations
 #' whether or not an approximation is to be used. \code{fit_outlier} is an exact test
 #' and calls \code{fit_outlier_model} with \code{approx = TRUE}.
-#' @seealso \code{\link{fit_graph}}, \code{\link{query}}, \code{\link{fit_outlier}}
 #' @export
 fit_outlier_model <- function(A,
                               adj,
@@ -31,7 +30,7 @@ fit_outlier_model <- function(A,
                               hom        = FALSE
                               ) {
   env <- environment()
-  if (inherits(adj, "gengraph")) adj <- adj_lst(adj)
+  if (inherits(adj, "gengraph")) adj <- ess::adj_lst(adj)
   M    <- nrow(A)
   vs   <- verts(A)
   type <- type_of_verts(vs)
@@ -113,7 +112,6 @@ fit_outlier_model <- function(A,
 #'
 #' The \code{adj} object is most typically found using \code{fit_graph}. But the user can supply
 #' an adjacency list, just a named \code{list}, of their own choice if needed.
-#' @seealso \code{\link{fit_outlier_model}}, \code{\link{fit_graph}}
 #' @export
 fit_outlier <- function(A,
                         z,
@@ -128,7 +126,7 @@ fit_outlier <- function(A,
   # - let z be null if z is not a new outlier just like in the molic package
 
   if (!identical_colnames(A, z)) stop("Variables in A and z is not in agreement!")
-  if (inherits(adj, "gengraph")) adj <- adj_lst(adj)
+  if (inherits(adj, "gengraph")) adj <- ess::adj_lst(adj)
 
   Az   <- rbind(A, z)
   vs   <- verts(Az)

@@ -6,7 +6,8 @@ Authors@R:
            family = "Lindskou",
            role = c("aut", "cre"),
            email = "mads@math.aau.dk")
-Description: Contains functions to generate the plots and statistical output found in the paper
+Description: Contains functions to generate the plots and statistical
+	     outputfound in the paper.
 Depends: R (>= 3.5.0)
 License: GPL-3
 Encoding: UTF-8
@@ -15,13 +16,13 @@ LinkingTo:
     Rcpp
 Imports: 
     Rcpp,
-    Matrix,
     doParallel,
     foreach,
     igraph,
     ggplot2,
     ggridges,
-    methods
+    methods,
+    ess
 Suggests:
     knitr,
     rmarkdown,
@@ -30,5 +31,5 @@ Suggests:
     testthat,
     gRapHD	
 VignetteBuilder: knitr
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 SystemRequirements: C++11

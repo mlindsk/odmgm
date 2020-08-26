@@ -6,7 +6,8 @@
 \alias{odmgm-package}
 \title{odmgm: Outlier Detection in Mixed Graphical Models}
 \description{
-Contains functions to generate the plots and statistical output found in the paper
+Contains functions to generate the plots and statistical
+	     outputfound in the paper.
 }
 \author{
 \strong{Maintainer}: Mads Lindskou \email{mads@math.aau.dk}

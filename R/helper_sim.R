@@ -106,7 +106,7 @@
 
 marginals_and_parents <- function(adj, type, vs, Ad = NULL) {
   .rip      <- if (type == "mixed") rip_marked(adj, disc(vs)) else rip(adj)
-  .rip_disc <- if (type == "mixed") rip(subgraph(cont(vs), adj)) else if (type == "pure_disc") .rip else NULL
+  .rip_disc <- if (type == "mixed") rip(ess::subgraph(cont(vs), adj)) else if (type == "pure_disc") .rip else NULL
   cms <- if (type != "pure_cont") a_marginals(Ad, .rip_disc$C) else NULL
   sms <- if (type != "pure_cont") a_marginals(Ad, .rip_disc$S) else NULL
   pa  <- if (type != "pure_disc") {
@@ -140,7 +140,9 @@ tmp_msg <- function() {
 #' @param adj Adjacency list of a decomposable graph
 #' @param nsim Number of simulations
 #' @param ncores Number of cores to use in parallelization
-#' @return This function returns a matrix of dimension \code{nsim x ncol(A)} where each row correspond to a simulated observation from a DGM represented by \code{adj}.
+#' @return This function returns a matrix of dimension \code{nsim x ncol(A)}
+#' where each row correspond to a simulated observation from a DGM represented
+#' by \code{adj}.
 #' @export
 dgm_sim <- function(A, adj, nsim = 10000, ncores = 1) {
   if (!is_matrix_chr(A)) stop("A is not a character matrix.")

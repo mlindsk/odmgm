@@ -48,6 +48,3 @@ different result since \code{z} was in reality appended twice.
 The \code{adj} object is most typically found using \code{fit_graph}. But the user can supply
 an adjacency list, just a named \code{list}, of their own choice if needed.
 }
-\seealso{
-\code{\link{fit_outlier_model}}, \code{\link{fit_graph}}
-}

@@ -45,6 +45,3 @@ The parameter \code{approx} is used to output the correct type of discrete simul
 whether or not an approximation is to be used. \code{fit_outlier} is an exact test
 and calls \code{fit_outlier_model} with \code{approx = TRUE}.
 }
-\seealso{
-\code{\link{fit_graph}}, \code{\link{query}}, \code{\link{fit_outlier}}
-}

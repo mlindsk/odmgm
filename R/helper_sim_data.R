@@ -167,7 +167,6 @@ sim_mixed_data <- function(Ad, pa, ns, coefs, hom) {
 #' @param sigma_hom Control for fixed variance if \code{hom = TRUE}
 #' @details cell_rate, beta_hom and sigma_hom are not used in the pure_cont case
 #' and when lvls is NULL it is assumed that g is of type pure_cont
-#' 
 #' @export
 cgr_sim <- function(g,
                     lvls        = NULL, # NULL if pure_cont
@@ -197,14 +196,14 @@ cgr_sim <- function(g,
   tv <- type_of_verts(vs) # if(!neq_empt_chr(vd)) "pure_cont" else if(!neq_empt_chr(vc)) "pure_cont" else "mixed"
 
   if (tv == "mixed") {
-    if(!is_decomposable(g, vd)) stop("g is not decomposable!")
+    if(!ess::is_decomposable(g, vd)) stop("g is not decomposable!")
   } else {
-    if(!is_decomposable(g)) stop("g is not decomposable!")
+    if(!ess::is_decomposable(g)) stop("g is not decomposable!")
   }
   
   # Discrete part
   Ad_mat <- if (tv != "pure_cont") {
-    gd <- if (neq_empt_chr(vc)) subgraph(vc, g) else g
+    gd <- if (neq_empt_chr(vc)) ess::subgraph(vc, g) else g
     sim_pure_disc_data(gd, lvls, ns, cell_rate)
   } else {NULL}
   
