@@ -2,26 +2,21 @@ library(igraph)
 library(dplyr)
 library(purrr)
 library(broom)
-library(molicMixed)
+library(odmgm)
 library(stringi)
 library(ggplot2)
 source("helpers.R")
 
-relative_path_to_fig <- "../../paper/incl/fig/"
-
-
 ## ---------------------------------------------------------
 ##                  FULL GRAPH
 ## ---------------------------------------------------------
-d <- "../data/prc/covtype.Rds" %>% readRDS() %>% as_tibble()
+d <- covtpyes 
 g <- "objects/full_graph_with_class_variable.Rds" %>% readRDS()
 g <- make_igraph(d, g, "black")
 V(g)$color[55] <- "grey"
 
-pdf(file = relative_path_to_fig %s+% "full_graph.pdf")
 plot(g, layout = layout_as_star(g, center = "X55"), vertex.size = 10, vertex.label = NA)
 title(parse(text = "G"), cex.main = 3, line = -27)
-dev.off()
 
 ## ---------------------------------------------------------
 ##                CLASS DISTRIBUTION
@@ -227,19 +222,14 @@ g7 <- "objects/graph_7.Rds" %>% readRDS()
 g7 <- make_igraph(d7, g7, "black")
 plot(g7, layout = layout_in_circle(g7, order = .order), vertex.size = 10, vertex.label = NA)
 
-pdf(file = relative_path_to_fig %s+% "graph7.pdf")
 plot(g7, layout = layout_in_circle(g7, order = .order), vertex.size = 10, vertex.label = NA)
 title(parse(text = "G[7]"), cex.main = 3, line = -27)
-dev.off()
 
 ## Subgraph
-
 h7 <- induced_subgraph(g7,
   c("X1", "X2","X3","X5","X6","X7","X8","X9","X10","X11", "X12", "X52","X53","X54")
 )
 
-
-pdf(file = relative_path_to_fig %s+% "subgraph7.pdf")
 plot(h7,
   vertex.size = 10,
   layout = layout_in_circle(h7),
@@ -250,7 +240,6 @@ plot(h7,
   label.family = "times"
 )
 title(parse(text = "H[7]"), cex.main = 2.5, line = -27)
-dev.off()
 
 # Plotting models
 

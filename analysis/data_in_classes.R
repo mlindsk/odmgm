@@ -2,8 +2,9 @@
 
 library(UpSetR)
 library(tidyverse)
+library(odmgm)
 
-d_cov <- "../data/prc/covtype.Rds" %>% readRDS() %>% as_tibble()
+d_cov <- covtype
 
 d_class <- readRDS("objects/d_outlier_in_which_class.Rds") %>% 
   bind_cols(CT = paste(d_cov$X55)) %>% 
@@ -41,7 +42,6 @@ d_class_ <- d_class %>%
 source("counter_.R")
 source("upset_.R")
 
-pdf("../../paper/incl/fig/upset_ODMGM.pdf", height = 12, width = 20, paper = "special")
 upset_(
   as.data.frame(d_class_), nsets = 7, sets = paste("CT =",7:1), keep.order = TRUE,
   sets.x.label = "Samples not rejected in given CT",

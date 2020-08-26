@@ -1,12 +1,12 @@
 library(dplyr)
-library(molicMixed)
+library(odmgm)
 
-d <- readRDS("../data/prc/covtype.Rds") %>% as_tibble()
+d <- covtypes
 
 ## ---------------------------------------------------------
 ##                MAKE THE FULL GRAPH
 ## ---------------------------------------------------------
-# g <- fit_mixed_graph(d)
+# g <- odmgm:::fit_mixed_graph(d) # takes forever...
 # saveRDS(g, "objects/full_graph_with_class_variable.Rds")
 
 v  <- molicMixed:::verts(d)

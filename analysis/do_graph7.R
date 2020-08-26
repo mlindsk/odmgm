@@ -5,14 +5,12 @@ library(igraph)
 library(dplyr)
 library(purrr)
 library(broom)
-library(molicMixed)
+library(odmgm)
 library(stringi)
 library(ggplot2)
 library(glue)
 library(patchwork)
 source("helpers.R")
-
-relative_path_to_fig <- "../../paper/incl/fig/"
 
 d7 <- "objects/data_7.Rds" %>% readRDS()
 g7 <- "objects/graph_7.Rds" %>% readRDS()
@@ -88,7 +86,6 @@ p7_10
 
 p <- p7_1 / p7_10
 p
-ggsave(relative_path_to_fig %s+% "gaussian_given_discrete_parents.pdf", width = 7, height = 5)
 
 # ?plotmath
 

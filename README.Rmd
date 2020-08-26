@@ -36,8 +36,5 @@ The `gRapHD` package is needed to fit a mixed interaction graph. Currently, the 
 # The Analysis 
 The code snippets to reproduce the results in the paper is located in the `analysis` folder.
 
-# Example of Usage
-Once the `odmgm` package is intalled
-
 # See also
 For outlier detection in pure categorical data, see the `R` package (on `CRAN`) [molic](https://github.com/mlindsk/molic). The `molic` package depends on the `R` package (on `CRAN`) [ess](https://github.com/mlindsk/ess) which is designed for efficient model selection in discrete decomposable models.
